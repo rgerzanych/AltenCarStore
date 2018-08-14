@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  altencarstore.vehicleservice:
+    image: ${DOCKER_REGISTRY}altencarstorevehicleservice
+    build:
+      context: .
+      dockerfile: src/AltenCarStore.Services/AltenCarStore.VehicleService/Dockerfile
+
+  altencarstore.driverservice:
+    image: ${DOCKER_REGISTRY}altencarstoredriverservice
+    build:
+      context: .
+      dockerfile: src/AltenCarStore.Services/AltenCarStore.DriverService/Dockerfile
+
+
+  altencarstore.vehiclestateservice:
+    image: ${DOCKER_REGISTRY}altencarstorevehiclestateservice
+    build:
+      context: .
+      dockerfile: src/AltenCarStore.Services/AltenCarStore.VehicleStateService/Dockerfile
+
+
+  altencarstore.web:
+    image: ${DOCKER_REGISTRY}altencarstoreweb
+    build:
+      context: .
+      dockerfile: AltenCarStore.Web/Dockerfile
+

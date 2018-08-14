@@ -1,0 +1,38 @@
+services:
+  altencarstore.driverservice:
+    build:
+      context: D:\Personal\Sources\AltenCarStore\src
+      dockerfile: src/AltenCarStore.Services/AltenCarStore.DriverService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: altencarstoredriverservice
+    ports:
+    - target: 80
+  altencarstore.vehicleservice:
+    build:
+      context: D:\Personal\Sources\AltenCarStore\src
+      dockerfile: src/AltenCarStore.Services/AltenCarStore.VehicleService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: altencarstorevehicleservice
+    ports:
+    - target: 80
+  altencarstore.vehiclestateservice:
+    build:
+      context: D:\Personal\Sources\AltenCarStore\src
+      dockerfile: src/AltenCarStore.Services/AltenCarStore.VehicleStateService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: altencarstorevehiclestateservice
+    ports:
+    - target: 80
+  altencarstore.web:
+    build:
+      context: D:\Personal\Sources\AltenCarStore\src
+      dockerfile: AltenCarStore.Web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: altencarstoreweb
+    ports:
+    - target: 80
+version: '3.4'
