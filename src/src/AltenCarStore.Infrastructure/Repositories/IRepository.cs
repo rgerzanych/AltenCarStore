@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using AltenCarStore.Infrastructure.Domain;
 
 namespace AltenCarStore.Infrastructure.Repositories
@@ -16,7 +18,7 @@ namespace AltenCarStore.Infrastructure.Repositories
         /// </summary>
         /// <param name="id">Instance's identifier.</param>
         /// <returns>Instance of T.</returns>
-        T GetById(Guid id);
+        Task<T> GetByIdAsync(Guid id);
 
         /// <summary>
         /// Update instance.
@@ -34,7 +36,14 @@ namespace AltenCarStore.Infrastructure.Repositories
         /// Get all instances.
         /// </summary>
         /// <returns>Collection of instances.</returns>
-        ICollection<T> GetAll();
+        Task<ICollection<T>> GetAllAsync();
+
+        /// <summary>
+        /// Find all instances matching predicate.
+        /// </summary>
+        /// <param name="predicate">Predicate expression.</param>
+        /// <returns>Collection of instances.</returns>
+        Task<ICollection<T>> FindAsync(Expression<Func<T, bool>> predicate);
 
         /// <summary>
         /// Remove instance.
