@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AltenCarStore.Infrastructure.Repositories;
 using AltenCarStore.VehicleService.Data.Abstractions;
 using AltenCarStore.VehicleService.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace AltenCarStore.VehicleService.Repositories
 {
@@ -33,9 +33,9 @@ namespace AltenCarStore.VehicleService.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<ICollection<Vehicle>> GetAllAsync()
+        public async Task<ICollection<Vehicle>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Vehicles.ToListAsync();
         }
 
         public Task<ICollection<Vehicle>> FindAsync(Expression<Func<Vehicle, bool>> predicate)

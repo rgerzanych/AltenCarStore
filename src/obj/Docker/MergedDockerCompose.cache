@@ -1,7 +1,7 @@
 services:
   altencarstore.driverservice:
     build:
-      context: D:\Personal\Sources\AltenCarStore\src
+      context: C:\Users\Gero\Documents\Visual Studio 2017\Projects\AltenCarStore\src
       dockerfile: src/AltenCarStore.Services/AltenCarStore.DriverService/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -10,7 +10,7 @@ services:
     - target: 80
   altencarstore.vehicleservice:
     build:
-      context: D:\Personal\Sources\AltenCarStore\src
+      context: C:\Users\Gero\Documents\Visual Studio 2017\Projects\AltenCarStore\src
       dockerfile: src/AltenCarStore.Services/AltenCarStore.VehicleService/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -19,7 +19,7 @@ services:
     - target: 80
   altencarstore.vehiclestateservice:
     build:
-      context: D:\Personal\Sources\AltenCarStore\src
+      context: C:\Users\Gero\Documents\Visual Studio 2017\Projects\AltenCarStore\src
       dockerfile: src/AltenCarStore.Services/AltenCarStore.VehicleStateService/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -28,7 +28,7 @@ services:
     - target: 80
   altencarstore.web:
     build:
-      context: D:\Personal\Sources\AltenCarStore\src
+      context: C:\Users\Gero\Documents\Visual Studio 2017\Projects\AltenCarStore\src
       dockerfile: AltenCarStore.Web/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development

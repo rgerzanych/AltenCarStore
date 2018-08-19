@@ -3,32 +3,32 @@ version: '3.4'
 services:
   altencarstore.driverservice:
     volumes:
-      - C:\Users\roman.gerzanych\vsdbg\vs2017u5:/remote_debugger:ro
+      - C:\Users\Gero\vsdbg\vs2017u5:/remote_debugger:ro
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_altencarstore.driverservice$ AltenCarStore.DriverService.dll"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  AltenCarStore.DriverService.dll"
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
 
   altencarstore.vehicleservice:
     volumes:
-      - C:\Users\roman.gerzanych\vsdbg\vs2017u5:/remote_debugger:ro
+      - C:\Users\Gero\vsdbg\vs2017u5:/remote_debugger:ro
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_altencarstore.vehicleservice$ AltenCarStore.VehicleService.dll"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  AltenCarStore.VehicleService.dll"
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
 
 
   altencarstore.vehiclestateservice:
     volumes:
-      - C:\Users\roman.gerzanych\vsdbg\vs2017u5:/remote_debugger:ro
+      - C:\Users\Gero\vsdbg\vs2017u5:/remote_debugger:ro
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_altencarstore.vehiclestateservice$ AltenCarStore.VehicleStateService.dll"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  AltenCarStore.VehicleStateService.dll"
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
 

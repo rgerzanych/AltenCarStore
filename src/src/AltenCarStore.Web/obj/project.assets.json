@@ -7688,7 +7688,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "DF9HcJ3iYFL0/F9TIbk+zn5RerZl6JOokkJ9Rky8gKmhK9lk64dSaNochAgKV4LJ9fmmKVHCsZZSlLZZfyLkmA==",
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -11478,7 +11478,7 @@
       ]
     },
     "System.Security.Cryptography.Xml/4.4.2": {
-      "sha512": "1m+fKVrApgKYMRuE0MF0vGjqy4XqAp1rCtyAzMXhJajMDDytMh/rHk9hp4M7KKk3QQZoWJUvyUY7xcw74w+JiQ==",
+      "sha512": "q9Dren/YP5jhRCkDvLfuaPpMTQzP97ANvzq/OoGgwK8YdLRSTABS9oW5/23OKoM2DRCuBrh4qaecD2YNhPtuzQ==",
       "type": "package",
       "path": "system.security.cryptography.xml/4.4.2",
       "files": [
@@ -12663,23 +12663,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\roman.gerzanych\\.nuget\\packages\\": {},
+    "C:\\Users\\Gero\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal\\Sources\\AltenCarStore\\src\\src\\AltenCarStore.Web\\AltenCarStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Gero\\Documents\\Visual Studio 2017\\Projects\\AltenCarStore\\src\\src\\AltenCarStore.Web\\AltenCarStore.Web.csproj",
       "projectName": "AltenCarStore.Web",
-      "projectPath": "D:\\Personal\\Sources\\AltenCarStore\\src\\src\\AltenCarStore.Web\\AltenCarStore.Web.csproj",
-      "packagesPath": "C:\\Users\\roman.gerzanych\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal\\Sources\\AltenCarStore\\src\\src\\AltenCarStore.Web\\obj\\",
+      "projectPath": "C:\\Users\\Gero\\Documents\\Visual Studio 2017\\Projects\\AltenCarStore\\src\\src\\AltenCarStore.Web\\AltenCarStore.Web.csproj",
+      "packagesPath": "C:\\Users\\Gero\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gero\\Documents\\Visual Studio 2017\\Projects\\AltenCarStore\\src\\src\\AltenCarStore.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\roman.gerzanych\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gero\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12687,14 +12687,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\_nuget_source": {},
-        "http://nuget.srv.symbotic.corp/nuget/Common": {},
-        "http://nuget.srv.symbotic.corp/nuget/CustomerConfigData/": {},
-        "http://nuget.srv.symbotic.corp/nuget/DataServices": {},
-        "http://nuget.srv.symbotic.corp/nuget/Official-Nuget/": {},
-        "http://nuget.srv.symbotic.corp/nuget/SRE/": {},
-        "http://nuget.srv.symbotic.corp/nuget/SystemManager/": {},
-        "http://nuget.srv.symbotic.corp/nuget/Third-Party/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

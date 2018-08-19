@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\roman.gerzanych\\.nuget\\packages\\": {},
+    "C:\\Users\\Gero\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal\\Sources\\AltenCarStore\\src\\src\\AltenCarStore.Core\\AltenCarStore.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Gero\\Documents\\Visual Studio 2017\\Projects\\AltenCarStore\\src\\src\\AltenCarStore.Core\\AltenCarStore.Core.csproj",
       "projectName": "AltenCarStore.Core",
-      "projectPath": "D:\\Personal\\Sources\\AltenCarStore\\src\\src\\AltenCarStore.Core\\AltenCarStore.Core.csproj",
-      "packagesPath": "C:\\Users\\roman.gerzanych\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal\\Sources\\AltenCarStore\\src\\src\\AltenCarStore.Core\\obj\\",
+      "projectPath": "C:\\Users\\Gero\\Documents\\Visual Studio 2017\\Projects\\AltenCarStore\\src\\src\\AltenCarStore.Core\\AltenCarStore.Core.csproj",
+      "packagesPath": "C:\\Users\\Gero\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gero\\Documents\\Visual Studio 2017\\Projects\\AltenCarStore\\src\\src\\AltenCarStore.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\roman.gerzanych\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gero\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -688,14 +688,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\_nuget_source": {},
-        "http://nuget.srv.symbotic.corp/nuget/Common": {},
-        "http://nuget.srv.symbotic.corp/nuget/CustomerConfigData/": {},
-        "http://nuget.srv.symbotic.corp/nuget/DataServices": {},
-        "http://nuget.srv.symbotic.corp/nuget/Official-Nuget/": {},
-        "http://nuget.srv.symbotic.corp/nuget/SRE/": {},
-        "http://nuget.srv.symbotic.corp/nuget/SystemManager/": {},
-        "http://nuget.srv.symbotic.corp/nuget/Third-Party/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

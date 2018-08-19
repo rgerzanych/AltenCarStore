@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
+using AltenCarStore.VehicleService.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace AltenCarStore.VehicleService
 {
@@ -24,6 +22,18 @@ namespace AltenCarStore.VehicleService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<VehiclesContext>(options =>
+            {
+                options.UseSqlServer(Configuration["ConnectionString"],
+                                     sqlServerOptionsAction: sqlOptions =>
+                                     {
+                                         sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name);
+                                         sqlOptions.EnableRetryOnFailure(
+                                             maxRetryCount: 10, 
+                                             maxRetryDelay: TimeSpan.FromSeconds(30), 
+                                             errorNumbersToAdd: null);
+                                     });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

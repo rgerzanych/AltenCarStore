@@ -1,44 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
+using AltenCarStore.VehicleService.Data.Abstractions;
+using AltenCarStore.VehicleService.DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AltenCarStore.VehicleService.Controllers
 {
     [Route("api/[controller]")]
     public class VehiclesController : Controller
     {
-        // GET api/values
+        private readonly IVehiclesContext _vehiclesContext;
+
+        public VehiclesController(IVehiclesContext vehiclesContext)
+        {
+            _vehiclesContext = vehiclesContext ?? throw new ArgumentNullException(nameof(vehiclesContext));
+        }
+
+        // GET api/vehicles
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<VehicleDto> Get([FromQuery] string ownerid = null, [FromQuery] bool? isConnected = null)
         {
-            return new string[] { "value1", "value2" };
+            var vehiclesQuery = _vehiclesContext.Vehicles.Include(v => v.Owner).AsQueryable();
+            if (!string.IsNullOrEmpty(ownerid))
+            {
+                Guid owner;
+                Guid.TryParse(ownerid, out owner);
+                vehiclesQuery = vehiclesQuery.Where(v => v.OwnerId == owner);
+            }
+            var vehicles = vehiclesQuery.ToList();
+            
+            // TODO: should be changed
+            return new List<VehicleDto>();
         }
 
-        // GET api/values/5
+        // GET api/vehicles/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public VehicleDto GetById(string id)
         {
-            return "value";
-        }
+            Guid vehicleId;
+            Guid.TryParse(id, out vehicleId);
+            var vehicles = _vehiclesContext.Vehicles.SingleOrDefaultAsync(v => v.Id == vehicleId);
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            // TODO: should be changed
+            return new VehicleDto();
         }
     }
 }
